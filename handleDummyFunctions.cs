@@ -7,6 +7,8 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Demo.Strategy;
+using azureFunctions.DTO;
 
 namespace Demo.Function
 {
@@ -19,7 +21,9 @@ namespace Demo.Function
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
 
-            String responseMessage = data.ToJSON();
+            MainEventStrategy eventStrategy = new MainEventStrategy();
+
+            string responseMessage = JsonConvert.SerializeObject(eventStrategy.Run(new DTO.MainEventDTO()));
 
             return new OkObjectResult(responseMessage);
         }

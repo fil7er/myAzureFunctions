@@ -6,16 +6,16 @@ namespace Demo.DTO
 
     public class MainEventDTO
     {
-        private readonly long eventTypeId;
-        private readonly string eventName;
-        private readonly string eventDescription;
-        private readonly EventType eventType;
+        public readonly long eventTypeId;
+        public readonly string eventName;
+        public readonly string eventDescription;
+        public readonly EventType eventType;
 
-        private class EventType
+        public class EventType
         {
-            private readonly long eventTypeId;
-            private readonly IReadOnlyDictionary<long, long> eventFlags;
-            private readonly IReadOnlyDictionary<string, string> eventDetails;
+            public readonly long eventTypeId;
+            public readonly IReadOnlyDictionary<long, long> eventFlags;
+            public readonly IReadOnlyDictionary<string, string> eventDetails;
 
         }
 

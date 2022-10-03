@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace azureFunctions.DTO
 {
-    internal class EventResponseDTO
+    public class EventResponseDTO
     {
+        public readonly long eventResponseId;
+        public readonly long eventStatus;
+        public readonly string eventResponseMessage;
+        public readonly IReadOnlyDictionary<long, long> eventResponseFlags;
+        public readonly IReadOnlyDictionary<string, string> eventResponseDetails;
     }
 }
