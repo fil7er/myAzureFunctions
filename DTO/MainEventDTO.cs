@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Demo.DTO
+namespace azureFunctions.DTO
 {
     
 

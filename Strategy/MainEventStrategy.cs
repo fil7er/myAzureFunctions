@@ -1,7 +1,6 @@
 using azureFunctions.DTO;
-using Demo.DTO;
 
-namespace Demo.Strategy
+namespace azureFunctions.Strategy
 {  
     public class MainEventStrategy
     {
