@@ -1,0 +1,1 @@
+Azure Functions APP using Event-Driven Architecture with OutBox Pattern. Configured to receive data from Azure Service Bus, can be used with Apache Kafta as well.
